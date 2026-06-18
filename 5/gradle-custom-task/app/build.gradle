@@ -1,0 +1,48 @@
+plugins {
+    id 'application'
+}
+
+group = 'com.exam'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.guava
+}
+
+testing {
+    suites {
+        test {
+            useJUnit('4.13.2')
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = 'org.example.App'
+}
+
+def projName = project.name
+def projVersion = project.version
+
+tasks.register("printInfo") {
+    doLast {
+        println "----------------------------"
+        println "Project Name: $projName"
+        println "Version: $projVersion"
+        println "----------------------------"
+    }
+}
+
+tasks.named("build") {
+    dependsOn("printInfo")
+}

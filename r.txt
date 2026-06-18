@@ -1,0 +1,173 @@
+1st
+
+mvn archetype:generate -DgroupId=com.exam
+-DartifactId=maven-demo 
+-DarchetypeArtifactId=maven-archetype-quickstart  
+-DinteractiveMode=false
+
+cd maven-demo
+ mvn test
+ mvn package 
+ls -l target/
+
+
+2nd
+
+mvn archetype:generate -DgroupId=com.exam
+-DartifactId=maven-demo 
+-DarchetypeArtifactId=maven-archetype-quickstart  
+-DinteractiveMode=false
+
+cd maven-demo
+
+mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout
+
+mvn clean compile exec:java
+
+
+
+3rd
+
+mvn archetype:generate -DgroupId=com.exam
+-DartifactId=maven-demo 
+-DarchetypeArtifactId=maven-archetype-quickstart  
+-DinteractiveMode=false
+
+cd maven-demo
+
+mvn clean test
+mvn clean compile
+mvn exec:java -Pdev
+mvn exec:java -Pprod
+
+
+4th
+
+
+mkdir gradle-demo 
+cd gradle-demo 
+gradle init --type java-application
+gradle test 
+gradle build
+ls -l app/build/libs
+
+
+5th
+
+mkdir gradle-demo 
+cd gradle-demo 
+gradle init --type java-application
+gradle build
+
+
+6th
+
+Maven
+
+mvn archetype:generate -DgroupId=com.exam
+-DartifactId=maven-demo 
+-DarchetypeArtifactId=maven-archetype-quickstart  
+-DinteractiveMode=false
+
+cd maven-demo
+ mvn test
+ mvn package 
+ls -l target/
+
+Gradle
+
+mkdir gradle-demo 
+cd gradle-demo 
+gradle init --type java-application
+gradle test 
+gradle build
+ls -l app/build/libs 
+
+10th
+
+
+ansible -i inventory.ini servers -m ping
+ansible -i inventory.ini servers -a "uptime"
+ansible -i inventory.ini servers -a "hostname"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ansible:
+
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+
+
+Maven:
+
+sudo apt update
+sudo apt install maven -y
+mvn -version
+
+Gradle:
+
+sudo apt update
+sudo apt install gradle -y
+gradle -v
+
+sudo snap install gradle --classic
+
+Jenkins:
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt update
+sudo apt install jenkins -y
+
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins  # Check if it's running
+
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+cat ~/.jenkins/secrets/initialAdminPassword
+
+http://localhost:8080
+
+
+GitHub:
+
+git clone https://github.com/parnikanag/devops1
+
+1  -  https://github.com/parnikanag/maven-demo
+2  -  https://github.com/parnikanag/maven-archive
+3  -  https://github.com/parnikanag/parameterized-build

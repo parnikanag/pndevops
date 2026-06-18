@@ -1,0 +1,38 @@
+plugins 
+{
+    id 'application'
+}
+
+repositories 
+{
+    mavenCentral()
+}
+
+dependencies 
+{
+    implementation libs.guava
+}
+
+testing 
+{
+    suites 
+    {
+        test 
+        {
+            useJUnit('4.13.2')
+        }
+    }
+}
+
+java 
+{
+    toolchain 
+    {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application 
+{
+    mainClass = 'org.example.App'
+}
