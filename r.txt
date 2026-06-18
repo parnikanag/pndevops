@@ -167,6 +167,7 @@ http://localhost:8080
 GitHub:
 
 git clone https://github.com/parnikanag/devops1
+git clone https://github.com/parnikanag/pndevops
 
 1  -  https://github.com/parnikanag/maven-demo
 2  -  https://github.com/parnikanag/maven-archive
